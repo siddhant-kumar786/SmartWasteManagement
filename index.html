@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo-container">
+            <img src="logo1.png" alt="Logo" class="logo"> <!-- Logo image -->
+            <h1>Smart Waste Management</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showHome()">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="showStatus()">Status</a></li>
+                <li><a href="javascript:void(0)" onclick="showGraphs()">Graphs</a></li>
+                <li><a href="javascript:void(0)">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Home Content -->
+        <div id="home-content">
+            <div id="motivcontent">
+                <h2 class = "mainhead">Welcome to the Smart Waste Management System</h2>
+                <p>Monitor and manage your waste bins with ease.</p>
+            </div>
+            <img id="motiveimg" src="Screenshot 2024-11-17 231938.png" alt=""> 
+
+            
+        </div>
+
+        <!-- Status Content with Data -->
+        <div id="status-content" style="display: none;">
+            <h2>Current Bin Status</h2>
+            <div class="status-container">
+                <div class="bin-status" id="dry-status">
+                    <!-- Dry Bin status will be updated here -->
+                </div>
+                <div class="bin-status" id="wet-status">
+                    <!-- Wet Bin status will be updated here -->
+                </div>
+                <div class="bin-status" id="moisture-status">
+                    <!-- Moisture status will be displayed here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Graphs Section -->
+        <div id="graphs-content" style="display: none;">
+            <h2>Graphs</h2>
+            <div id="graphs">
+                <div class="graph">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                            src="https://thingspeak.com/channels/2749381/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+                <div class="graph">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                            src="https://thingspeak.com/channels/2749381/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+                <div class="graph">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                            src="https://thingspeak.com/channels/2749381/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Smart Waste Management | All Rights Reserved</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

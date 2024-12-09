@@ -1,0 +1,226 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #000000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar Styling */
+header {
+    background-color: #267d28;
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffa500;  /* Hover effect */
+}
+
+/* Main Content Styling */
+.main-content {
+    position: relative;
+    /* border: 2px solid red; */
+    top: 80px;
+    text-align: center;
+    /* margin: 0 auto; */
+    width: 100%;
+    /* padding: 20px; */
+    height: 70vh; 
+
+}
+
+/* Status Content */
+/* #status-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+    margin-top: 5px;
+} */
+
+#graphs-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#graphs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.graph {
+    width: 450px;
+    height: 260px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #267d28;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffa500;
+}
+#home-content{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f3ecec;
+    /* align-items: center; */
+}
+#motiveimg{
+    width: 45%;
+}
+#motivcontent{
+    margin-top: 110px;
+    color: #267d28;
+    font-size: 30px;
+}
+.mainhead{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+/* Define the animation */
+@keyframes slideInFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+        color: #f0f0f0;
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(0px);
+        color: #6bbf59;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        color: #2d8634;
+    }
+}
+
+/* Apply the animation to the heading */
+.mainhead {
+    font-family: 'Arial', sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    animation: slideInFadeIn 2s ease-in-out;
+}
+
+/* Define the animation for status content */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling the status content */
+#status-content {
+    background: #f9f9f9; /* Light background for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 80%;
+    animation: fadeInUp 1.5s ease-out; /* Apply animation */
+    display: none; /* Keep hidden by default */
+}
+
+/* Styling individual bin status cards */
+.bin-status {
+    background: #ffffff; /* White background for cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+}
+
+.bin-status:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
